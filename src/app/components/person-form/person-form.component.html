@@ -1,0 +1,20 @@
+<form [formGroup]="formgroup" class="row">
+    <div class="form-group col-6">
+        <label for="fname">First name:</label>
+        <input type="text" class="form-control" id="fname" formControlName="fname" placeholder="Enter first name"
+            name="fname" required>
+        <!-- <div class="valid-feedback">Valid.</div> -->
+        <div *ngIf="formgroup.get('fname').touched && formgroup.get('fname').errors?.required" class="err-message">
+            Please enter the first name!</div>
+    </div>
+
+    <div class="form-group col-6">
+        <label for="lname">Last name:</label>
+        <input type="text" class="form-control" id="lname" formControlName="lname" placeholder="Enter Last name"
+            name="lname" required>
+        <div *ngIf="formgroup.get('lname').touched && formgroup.get('lname').errors?.required" class="err-message">
+            Please enter the last name!</div>
+    </div>
+
+    <app-address-form [formGroup]="formgroup.get('address')" class="col-12"></app-address-form>
+</form>

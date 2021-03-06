@@ -1,0 +1,9 @@
+<div class="card login_card text-center border border-light p-5">
+    <p class="h4 mb-4">Sign in</p>
+    <!-- Email -->
+    <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Username" [(ngModel)]="username" name="username">
+
+    <!-- Password -->
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" [(ngModel)]="password" name="password">
+    <button mdbBtn color="info" block="true" class="my-4 btn-primary" type="submit" (click)="login()">Sign in</button>
+</div>

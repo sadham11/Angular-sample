@@ -1,0 +1,14 @@
+<Card>
+    <CardHeader>
+        Add User
+    </CardHeader>
+    <CardBody>
+        <app-person-form [formgroup]="addUserForm"></app-person-form>
+    </CardBody>
+    <CardFooter>
+        <CardActions>
+            <button type="button" class="btn btn-outline-secondary m-1">cancel</button>
+            <button type="button" class="btn btn-outline-primary m-1" [disabled]="!addUserForm.valid" (click)="submit()">Submit</button>
+        </CardActions>
+    </CardFooter>
+</Card>

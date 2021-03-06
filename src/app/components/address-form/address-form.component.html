@@ -1,0 +1,35 @@
+<div [formGroup]="formgroup" class="row">
+    <div class="form-group col-6">
+        <label for="adr1">Address line 1:</label>
+        <input type="text" class="form-control" id="adr1" formControlName="addressLine1" placeholder="address line 1"
+            name="adr1" required>
+        <div *ngIf="formgroup.get('addressLine1').touched && formgroup.get('addressLine1').errors?.required"
+            class="err-message">
+            Please enter address line 1</div>
+    </div>
+    <div class="form-group col-6">
+        <label for="adr2">Address line 2:</label>
+        <input type="text" class="form-control" id="adr2" formControlName="addressLine2" placeholder="address line 2"
+            name="adr2" required>
+        <div *ngIf="formgroup.get('addressLine2').touched && formgroup.get('addressLine2').errors?.required"
+            class="err-message">
+            Please enter address line 1</div>
+    </div>
+
+    <div class="form-group col-6">
+        <label for="city">City/Town</label>
+        <input type="text" class="form-control" formControlName="city" id="city" placeholder="City / Town" name="city"
+            required>
+        <div *ngIf="formgroup.get('city').touched && formgroup.get('city').errors?.required" class="err-message">
+            Please enter the city</div>
+    </div>
+
+    <div class="form-group col-6">
+        <label for="postalCode">Postal Code</label>
+        <input type="text" class="form-control" id="postalCode" formControlName="postalCode" placeholder="Postal Code"
+            name="postalCode" required>
+        <div *ngIf="formgroup.get('postalCode').touched && formgroup.get('postalCode').errors?.required"
+            class="err-message">
+            Please enter the postal<div>
+            </div>
+        </div>

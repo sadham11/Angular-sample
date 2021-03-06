@@ -1,0 +1,22 @@
+<div class="row">
+    <Card *ngFor="let user of users" class="w-40 col-6">
+        <CardHeader>
+            <CardTitle>
+                {{user.first_name+' '+user.last_name}}
+            </CardTitle>
+        </CardHeader>
+        <CardBody>
+            {{user.first_name+' '+user.last_name}}
+            <div>
+                {{user.email}}
+            </div>
+        </CardBody>
+        <CardFooter>
+            <CardActions>
+                <button type="button" class="btn btn-outline-secondary m-1">cancel</button>
+                <button type="button" class="btn btn-outline-primary m-1">Submit</button>
+            </CardActions>
+        </CardFooter>
+
+    </Card>
+</div>
