@@ -23,4 +23,14 @@ export class HttpService {
     };
     return this.http.get(url, options);
   }
+
+  postService(url:any, objects:any) {
+    return this.http.post(baseUrl + url, objects);
+  }
+
+  postwithHeaderService(url:any, objects:any, options:any) {
+    return this.http.post(baseUrl + url, objects, options);
+  }
+
+  //need to create similiar wrap up services for our needs
 }
