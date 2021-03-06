@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HttpService } from 'src/app/shared/services/http.service';
 import { UserService } from 'src/app/shared/services/user.service';
 
@@ -13,7 +14,7 @@ export class AddEmployeeComponent implements OnInit {
   addUserForm: FormGroup = this.formBuilder.group({});
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -44,6 +45,7 @@ export class AddEmployeeComponent implements OnInit {
         //show notification and clear form
         window.alert('added successfully!');
         this.intializeForm();
+        // this.router.navigateByUrl('home/view-employee')
       },
       (err) => {
         console.error(err);
